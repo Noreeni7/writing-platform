@@ -5,6 +5,8 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+
 </head>
 
 <body>
@@ -107,6 +109,30 @@
 
         </div>
     </section>
+
+    {{-- FOOTER --}}
+    <footer class="bg-gray-900 text-gray-300 py-10 mt-20">
+        <div class="max-w-6xl mx-auto px-6 flex flex-col md:flex-row justify-between items-center">
+
+            {{-- Brand --}}
+            <div class="mb-6 md:mb-0 text-center md:text-left">
+                <h3 class="text-xl font-bold text-white">Writerly</h3>
+                <p class="text-gray-400">A space for creative writing and poetry.</p>
+            </div>
+
+            {{-- Links --}}
+            <div class="flex space-x-6 text-center md:text-right">
+                <a href="#articles" class="hover:text-white transition">Articles</a>
+                <a href="#poetry" class="hover:text-white transition">Poetry</a>
+                <a href="#" class="hover:text-white transition">About</a>
+                <a href="#" class="hover:text-white transition">Contact</a>
+            </div>
+        </div>
+
+        <div class="mt-8 text-center text-gray-500 text-sm">
+            &copy; {{ date('Y') }} Writerly. All rights reserved.
+        </div>
+    </footer>
 
 
 </body>
