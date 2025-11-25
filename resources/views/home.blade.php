@@ -60,6 +60,55 @@
         </div>
     </section>
 
+    {{-- FEATURED POETRY --}}
+    <section id="poetry" class="py-20 px-6">
+        <h2 class="text-3xl font-bold text-center mb-12">Featured Poetry</h2>
+
+        <div class="max-w-6xl mx-auto grid md:grid-cols-3 gap-10">
+
+            {{-- Poem Card --}}
+            <div class="group border border-gray-200 rounded-2xl p-6 hover:shadow-lg transition bg-white">
+                <h3 class="text-xl font-semibold mb-3 group-hover:text-gray-900">
+                    Whispers at Dawn
+                </h3>
+                <p class="text-gray-600 mb-4 italic">
+                    *In the quiet hush before the sun breaks...*
+                </p>
+                <a href="#" class="text-gray-800 font-medium group-hover:underline">
+                    Read poem →
+                </a>
+            </div>
+
+            {{-- Poem Card --}}
+            <div class="group border border-gray-200 rounded-2xl p-6 hover:shadow-lg transition bg-white">
+                <h3 class="text-xl font-semibold mb-3 group-hover:text-gray-900">
+                    Petals in the Wind
+                </h3>
+                <p class="text-gray-600 mb-4 italic">
+                    *A soft dance of stories carried on gentle winds...*
+                </p>
+                <a href="#" class="text-gray-800 font-medium group-hover:underline">
+                    Read poem →
+                </a>
+            </div>
+
+            {{-- Poem Card --}}
+            <div class="group border border-gray-200 rounded-2xl p-6 hover:shadow-lg transition bg-white">
+                <h3 class="text-xl font-semibold mb-3 group-hover:text-gray-900">
+                    Echoes of Light
+                </h3>
+                <p class="text-gray-600 mb-4 italic">
+                    *Where shadows end, a tender glow begins...*
+                </p>
+                <a href="#" class="text-gray-800 font-medium group-hover:underline">
+                    Read poem →
+                </a>
+            </div>
+
+        </div>
+    </section>
+
+
 </body>
 
 </html>
