@@ -45,44 +45,20 @@
         <div class="max-w-6xl mx-auto grid md:grid-cols-3 gap-10">
 
             <!-- Article Card  -->
+
+            @foreach ($articles as $article)
             <div class="group border border-gray-200 rounded-2xl p-6 hover:shadow-lg transition text-gray-900 dark:text-white">
                 <h3 class="text-xl font-semibold mb-3 group-hover:text-green-500">
-                    The Art of Slow Living
+                    {{ $article->title }}
                 </h3>
                 <p class="text-gray-600 dark:text-gray-300 text-gray-600 mb-4">
-                    Exploring intentional living in a noisy world.
+                    {{ $article->excerpt }}
                 </p>
                 <a href="#" class="text-gray-800 font-medium group-hover:underline">
                     Read more →
                 </a>
             </div>
-
-            <!-- Article Card  -->
-            <div class="group border border-gray-200 rounded-2xl p-6 hover:shadow-lg transition text-gray-900 dark:text-white">
-                <h3 class="text-xl font-semibold mb-3 group-hover:text-pink-500">
-                    Creativity in Stillness
-                </h3>
-                <p class="text-gray-600 dark:text-gray-300 mb-4">
-                    Why quiet spaces help unlock deeper ideas.
-                </p>
-                <a href="#" class="text-gray-800 font-medium group-hover:underline">
-                    Read more →
-                </a>
-            </div>
-
-            <!-- Article Card  -->
-            <div class="group border border-gray-200 rounded-2xl p-6 hover:shadow-lg transition text-gray-900 dark:text-white">
-                <h3 class="text-xl font-semibold mb-3 group-hover:text-yellow-500">
-                    Designing a Minimal Life
-                </h3>
-                <p class="text-gray-600 dark:text-gray-300 text-gray-600 mb-4">
-                    Lessons from minimalism for a balanced lifestyle.
-                </p>
-                <a href="#" class="text-gray-800 font-medium group-hover:underline">
-                    Read more →
-                </a>
-            </div>
-
+            @endforeach
         </div>
     </section>
 
@@ -93,43 +69,19 @@
         <div class="max-w-6xl mx-auto grid md:grid-cols-3 gap-10">
 
             <!-- Poem Card  -->
+            @foreach ($poems as $poem)
             <div class="group border border-gray-200 rounded-2xl p-6 hover:shadow-lg transition bg-white">
                 <h3 class="text-xl font-semibold mb-3 group-hover:text-gray-900">
-                    Whispers at Dawn
+                    {{ $poem->title }}
                 </h3>
                 <p class="text-gray-600 mb-4 italic">
-                    *In the quiet hush before the sun breaks...*
+                    {{ $poem->content }}
                 </p>
                 <a href="#" class="text-gray-800 font-medium group-hover:underline">
                     Read poem →
                 </a>
             </div>
-
-            <!-- Poem Card  -->
-            <div class="group border border-gray-200 rounded-2xl p-6 hover:shadow-lg transition bg-white">
-                <h3 class="text-xl font-semibold mb-3 group-hover:text-gray-900">
-                    Petals in the Wind
-                </h3>
-                <p class="text-gray-600 mb-4 italic">
-                    *A soft dance of stories carried on gentle winds...*
-                </p>
-                <a href="#" class="text-gray-800 font-medium group-hover:underline">
-                    Read poem →
-                </a>
-            </div>
-
-            <!-- Poem Card  -->
-            <div class="group border border-gray-200 rounded-2xl p-6 hover:shadow-lg transition bg-white">
-                <h3 class="text-xl font-semibold mb-3 group-hover:text-gray-900">
-                    Echoes of Light
-                </h3>
-                <p class="text-gray-600 mb-4 italic">
-                    *Where shadows end, a tender glow begins...*
-                </p>
-                <a href="#" class="text-gray-800 font-medium group-hover:underline">
-                    Read poem →
-                </a>
-            </div>
+            @endforeach
 
         </div>
     </section>
