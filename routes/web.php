@@ -24,3 +24,8 @@ Route::get('/poems/{slug}', function ($slug) {
     $poem = Poem::where('slug', $slug)->firstOrFail();
     return view('poems.show', compact('poem'));
 });
+
+// About page
+Route::get('/about', function () {
+    return view('about'); 
+});

@@ -21,8 +21,8 @@
             <nav class="space-x-6 hidden md:flex">
                 <a href="#articles" class="text-gray-700 hover:text-gray-900 transition">Articles</a>
                 <a href="#poetry" class="text-gray-700 hover:text-gray-900 transition">Poetry</a>
-                <a href="#" class="text-gray-700 hover:text-gray-900 transition">About</a>
-                <a href="#" class="text-gray-700 hover:text-gray-900 transition">Contact</a>
+                <a href="/about" class="text-gray-700 hover:text-gray-900 transition">About</a>
+                <!-- <a href="#" class="text-gray-700 hover:text-gray-900 transition">Contact</a> -->
             </nav>
 
             <!-- Mobile Menu Button  -->
@@ -101,7 +101,7 @@
                 <a href="#articles" class="hover:text-white transition">Articles</a>
                 <a href="#poetry" class="hover:text-white transition">Poetry</a>
                 <a href="#" class="hover:text-white transition">About</a>
-                <a href="#" class="hover:text-white transition">Contact</a>
+                <!-- <a href="#" class="hover:text-white transition">Contact</a> -->
             </div>
         </div>
 
