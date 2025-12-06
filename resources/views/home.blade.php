@@ -54,7 +54,7 @@
                 <p class="text-gray-600 dark:text-gray-300 text-gray-600 mb-4">
                     {{ $article->excerpt }}
                 </p>
-                <a href="#" class="text-gray-800 font-medium group-hover:underline">
+                <a href="/articles/{{ $article->slug }}" class="text-white-800 font-medium group-hover:underline">
                     Read more →
                 </a>
             </div>
