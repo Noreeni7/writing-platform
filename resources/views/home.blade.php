@@ -77,7 +77,7 @@
                 <p class="text-gray-600 mb-4 italic">
                     {{ $poem->content }}
                 </p>
-                <a href="#" class="text-gray-800 font-medium group-hover:underline">
+                <a href="/poems/{{ $poem -> slug }}" class="text-gray-800 font-medium group-hover:underline">
                     Read poem →
                 </a>
             </div>

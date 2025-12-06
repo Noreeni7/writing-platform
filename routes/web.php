@@ -18,3 +18,9 @@ Route::get('/articles/{slug}', function ($slug) {
     $article = Article::where('slug', $slug)->firstOrFail();
     return view('articles.show', compact('article'));
 });
+
+// Poem detail page route
+Route::get('/poems/{slug}', function ($slug) {
+    $poem = Poem::where('slug', $slug)->firstOrFail();
+    return view('poems.show', compact('poem'));
+});
