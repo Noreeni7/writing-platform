@@ -1,31 +1,30 @@
 <?php
 
+use App\Http\Controllers\ProfileController;
 use Illuminate\Support\Facades\Route;
 
-use App\Models\Article;
-use App\Models\Poem;
+use App\Http\Controllers\Admin\ArticleController;
+use App\Http\Controllers\Admin\PoemController;
 
-// Homepage route
+
 Route::get('/', function () {
-    $articles = Article::latest()->take(3)->get();
-    $poems = Poem::latest()->take(3)->get();
-
-    return view('home', compact('articles', 'poems'));
+    return view('welcome');
 });
 
-// Article detail page route
-Route::get('/articles/{slug}', function ($slug) {
-    $article = Article::where('slug', $slug)->firstOrFail();
-    return view('articles.show', compact('article'));
+Route::get('/dashboard', function () {
+    return view('dashboard');
+})->middleware(['auth', 'verified'])->name('dashboard');
+
+Route::middleware('auth')->group(function () {
+    Route::get('/profile', [ProfileController::class, 'edit'])->name('profile.edit');
+    Route::patch('/profile', [ProfileController::class, 'update'])->name('profile.update');
+    Route::delete('/profile', [ProfileController::class, 'destroy'])->name('profile.destroy');
 });
 
-// Poem detail page route
-Route::get('/poems/{slug}', function ($slug) {
-    $poem = Poem::where('slug', $slug)->firstOrFail();
-    return view('poems.show', compact('poem'));
+Route::middleware(['auth'])->prefix('admin')->name('admin.')->group(function () {
+    Route::resource('articles', ArticleController::class);
+    Route::resource('poems', PoemController::class);
 });
 
-// About page
-Route::get('/about', function () {
-    return view('about'); 
-});
+
+require __DIR__.'/auth.php';
