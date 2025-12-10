@@ -77,6 +77,11 @@
             <!-- Poem Card  -->
             @foreach ($poems as $poem)
             <div class="group border border-gray-200 rounded-2xl p-6 hover:shadow-lg transition bg-white">
+                @if($article->images)
+                <img
+                    src="{{ asset('storage/poems/' . $poem->images) }}"
+                    class="w-full h-48 object-cover rounded-xl mb-4">
+                @endif
                 <h3 class="text-xl font-semibold mb-3 group-hover:text-gray-900">
                     {{ $poem->title }}
                 </h3>

@@ -11,14 +11,17 @@ return new class extends Migration
      */
     public function up(): void
     {
-        Schema::table('articles', function (Blueprint $table) {
-            $table->string('images')->nullable()->after('excerpt'); // adjust 'excerpt' to where you want
+        Schema::table('poems', function (Blueprint $table) {
+            $table->string('images')->nullable()->after('excerpt');
         });
     }
 
+    /**
+     * Reverse the migrations.
+     */
     public function down(): void
     {
-        Schema::table('articles', function (Blueprint $table) {
+        Schema::table('poems', function (Blueprint $table) {
             $table->dropColumn('images');
         });
     }
