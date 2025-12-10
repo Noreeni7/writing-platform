@@ -48,6 +48,12 @@
 
             @foreach ($articles as $article)
             <div class="group border border-gray-200 rounded-2xl p-6 hover:shadow-lg transition text-gray-900 dark:text-white">
+                @if($article->images)
+                <img
+                    src="{{ asset('storage/articles/' . $article->images) }}"
+                    class="w-full h-48 object-cover rounded-xl mb-4">
+                @endif
+
                 <h3 class="text-xl font-semibold mb-3 group-hover:text-green-500">
                     {{ $article->title }}
                 </h3>
