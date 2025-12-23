@@ -4,7 +4,6 @@ namespace App\Http\Controllers\Admin;
 
 use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
-
 use App\Models\Article;
 use Illuminate\Support\Str;
 
@@ -15,7 +14,9 @@ class ArticleController extends Controller
      */
     public function index()
     {
-        //
+        // Get all articles, paginated
+        $articles = Article::latest()->paginate(10);
+        return view('admin.articles.index', compact('articles'));
     }
 
     /**
@@ -23,7 +24,7 @@ class ArticleController extends Controller
      */
     public function create()
     {
-        //
+        return view('admin.articles.create');
     }
 
     /**
@@ -56,19 +57,11 @@ class ArticleController extends Controller
     }
 
     /**
-     * Display the specified resource.
-     */
-    public function show(string $id)
-    {
-        //
-    }
-
-    /**
      * Show the form for editing the specified resource.
      */
-    public function edit(string $id)
+    public function edit(Article $article)
     {
-        //
+        return view('admin.articles.edit', compact('article'));
     }
 
     /**
@@ -99,12 +92,12 @@ class ArticleController extends Controller
             ->with('success', 'Article updated successfully');
     }
 
-
     /**
      * Remove the specified resource from storage.
      */
-    public function destroy(string $id)
+    public function destroy(Article $article)
     {
-        //
+        
+        
     }
 }
